@@ -16,6 +16,14 @@ namespace CsharpV3
         {
             Console.WriteLine("terbang");
         }
-
+    }
+    class Marksman : Hero
+    {
+        public string senjata = "pistol";
+        public int tinggi {  get; set; }
+        public void suaraSenjata()
+        {
+            Console.WriteLine("dar dar");
+        }
     }
 }
