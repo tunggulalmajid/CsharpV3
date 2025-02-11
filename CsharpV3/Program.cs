@@ -49,6 +49,12 @@ namespace CsharpV3
             Console.WriteLine("Villain Argus memiliki total kekuatan >> {0}", Argus.total_kekuatan());
 
             string HasilAura;
+            string HasilHealth;
+            string HasilKekuatan;
+            string HasilTotalKekuatan;
+            string Kesimpulan;
+            string HasilPower;
+
             if (Lancer.color == "yellow" && Argus.aura == "red" )
             {
                 HasilAura = "aura milik villain lebih kuat daripada Hero";
@@ -59,12 +65,35 @@ namespace CsharpV3
 
             }
 
+            
+            if (Lancer.power > Argus.power)
+            {
+                HasilPower = "Power Hero lebih kuat daripada Villain";
+            }
+            else
+            {
+                HasilPower = "Power Villain lebih kuat daripada Hero";
+            }
+
+            
+            if (Lancer.health > Argus.health)
+            {
+                HasilHealth = "Health Hero lebih besar daripada Villain";
+            }
+            else
+            {
+                HasilPower = "Health Villain lebih besar daripada Hero";
+            }
+
+
+
             Console.WriteLine("");
             Console.WriteLine("Perbandingan kekuatan");
+
             Console.Write("1. ");
             Console.WriteLine(HasilAura);
 
-            Console.ReadLine();2
+            Console.ReadLine();
         }
     }
 }
