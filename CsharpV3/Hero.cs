@@ -14,7 +14,12 @@ namespace CsharpV3
         public int health = 1500;
         public void kekuatan()
         {
-            Console.WriteLine("terbang");
+            Console.WriteLine("Light Aura");
+        }
+        public int total_kekuatan()
+        {
+            int total = power + health;
+            return total;
         }
     }
     class Marksman : Hero
@@ -24,6 +29,22 @@ namespace CsharpV3
         public void suaraSenjata()
         {
             Console.WriteLine("dar dar");
+        }
+    }
+
+    class villain
+    {
+        public string aura = "red";
+        public int power = 1500;
+        public int health = 750;
+        public void kekuatan() 
+        {
+            Console.WriteLine("dark Aura");
+        }
+        public int total_kekuatan()
+        {
+            int total = power + health;
+            return total;
         }
     }
 }
