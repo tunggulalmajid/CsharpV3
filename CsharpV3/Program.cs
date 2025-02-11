@@ -48,10 +48,23 @@ namespace CsharpV3
             Argus.kekuatan();
             Console.WriteLine("Villain Argus memiliki total kekuatan >> {0}", Argus.total_kekuatan());
 
+            string HasilAura;
+            if (Lancer.color == "yellow" && Argus.aura == "red" )
+            {
+                HasilAura = "aura milik villain lebih kuat daripada Hero";
+            }
+            else
+            {
+                HasilAura = "aura milik Hero lebih kuat daripada Villain";
 
+            }
 
+            Console.WriteLine("");
+            Console.WriteLine("Perbandingan kekuatan");
+            Console.Write("1. ");
+            Console.WriteLine(HasilAura);
 
-            Console.ReadLine();
+            Console.ReadLine();2
         }
     }
 }
