@@ -102,6 +102,25 @@ namespace CsharpV3
                 PoinVillain += 1;
             }
 
+            if (PoinHero > PoinVillain)
+            {
+                Kesimpulan = "Hero Menang";
+            }
+            else if (PoinHero == PoinVillain)
+            {
+                if (Lancer.total_kekuatan() > Argus.total_kekuatan())
+                {
+                    Kesimpulan = "Hero Menang";
+                }
+                else
+                {
+                    Kesimpulan = "villain menang";
+                }
+            }
+            else
+            {
+                Kesimpulan = "villain menang";
+            }
 
 
             Console.WriteLine("");
@@ -115,6 +134,14 @@ namespace CsharpV3
             Console.WriteLine(HasilHealth);
             Console.Write("4. ");
             Console.WriteLine(HasilTotalKekuatan);
+
+            Console.WriteLine("");
+            Console.WriteLine("Kesimpulan");
+            Console.WriteLine("Total Poin Hero >> {0}", PoinHero);
+            Console.WriteLine("Total Poin Villain >> {0}", PoinVillain);
+            Console.WriteLine("hasil akhir >> {0}",Kesimpulan);
+
+
 
             Console.ReadLine();
         }
