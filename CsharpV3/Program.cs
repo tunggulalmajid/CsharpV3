@@ -48,9 +48,10 @@ namespace CsharpV3
             Argus.kekuatan();
             Console.WriteLine("Villain Argus memiliki total kekuatan >> {0}", Argus.total_kekuatan());
 
+            int PoinHero = 0;
+            int PoinVillain = 0;
             string HasilAura;
             string HasilHealth;
-            string HasilKekuatan;
             string HasilTotalKekuatan;
             string Kesimpulan;
             string HasilPower;
@@ -58,31 +59,47 @@ namespace CsharpV3
             if (Lancer.color == "yellow" && Argus.aura == "red" )
             {
                 HasilAura = "aura milik villain lebih kuat daripada Hero";
+                PoinVillain += 1;
             }
             else
             {
                 HasilAura = "aura milik Hero lebih kuat daripada Villain";
-
+                PoinHero += 1;
             }
 
             
             if (Lancer.power > Argus.power)
             {
                 HasilPower = "Power Hero lebih kuat daripada Villain";
+                PoinHero += 1;
             }
             else
             {
                 HasilPower = "Power Villain lebih kuat daripada Hero";
+                PoinVillain += 1;
             }
 
             
             if (Lancer.health > Argus.health)
             {
                 HasilHealth = "Health Hero lebih besar daripada Villain";
+                PoinHero += 1;
             }
             else
             {
-                HasilPower = "Health Villain lebih besar daripada Hero";
+                HasilHealth = "Health Villain lebih besar daripada Hero";
+                PoinVillain += 1;
+            }
+
+            if (Lancer.total_kekuatan() > Argus.total_kekuatan())
+            {
+                HasilTotalKekuatan = "Hero lebih kuat daripada Villain";
+                PoinHero += 1;
+            }
+            else
+            {
+                HasilTotalKekuatan = "Villain lebih kuat daripada Hero";
+                PoinVillain += 1;
             }
 
 
@@ -92,6 +109,12 @@ namespace CsharpV3
 
             Console.Write("1. ");
             Console.WriteLine(HasilAura);
+            Console.Write("2. ");
+            Console.WriteLine(HasilPower);
+            Console.Write("3. ");
+            Console.WriteLine(HasilHealth);
+            Console.Write("4. ");
+            Console.WriteLine(HasilTotalKekuatan);
 
             Console.ReadLine();
         }
